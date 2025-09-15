@@ -7,14 +7,14 @@
         { "name": "Home", "path": "/" },
         { "name": "About", "path": "/about" },
         { "name": "Staff", "path": "/staff" },
-        { "name": "Contact", "path": "/contact" }
+        { "name": "Contact", "path": "/#contact" }
     ],
     "hero": {
         "title": "Professional Counseling Services in West Lafayette",
         "subtitle": "Take the first step towards healing and growth with compassionate, evidence-based therapy in a warm and welcoming environment.",
         "cta": {
             "text": "Schedule a Consultation",
-            "link": "/contact"
+            "link": "#contact"
         },
         "image": "/images/hero-therapy.svg"
     },

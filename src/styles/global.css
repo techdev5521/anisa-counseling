@@ -6,6 +6,11 @@
  */
 
 @layer base {
+  /* Enable smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   :root {
     /* Primary Earth Tones */
     --color-warm-brown: 101 84 68;           /* #654434 - Primary brand color */

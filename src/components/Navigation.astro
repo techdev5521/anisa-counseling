@@ -118,3 +118,58 @@ const currentPath = Astro.url.pathname
     opacity: 1;
   }
 </style>
+
+<script>
+  // Close mobile menu when clicking on a link
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    
+    // Close mobile menu when clicking on any mobile menu link
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenuToggle) {
+          mobileMenuToggle.checked = false;
+        }
+      });
+    });
+    
+    // Enhanced smooth scrolling for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"], a[href^="/#"]');
+    
+    anchorLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        let href = this.getAttribute('href');
+        
+        // Handle both #contact and /#contact formats
+        if (href.startsWith('/#')) {
+          href = href.substring(1); // Remove the leading /
+        }
+        
+        const targetId = href.substring(1); // Remove the #
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          e.preventDefault();
+          
+          // Close mobile menu if open
+          if (mobileMenuToggle) {
+            mobileMenuToggle.checked = false;
+          }
+          
+          // Smooth scroll to target with offset for fixed navigation
+          const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+          const targetPosition = targetElement.offsetTop - navHeight - 20; // 20px additional padding
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Update URL hash
+          history.pushState(null, null, href);
+        }
+      });
+    });
+  });
+</script>
