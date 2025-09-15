@@ -1,0 +1,14 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple tree trunk -->
+  <rect x="55" y="75" width="10" height="35" fill="#5c4c3d" rx="5"/>
+  
+  <!-- Main foliage - simplified to 3 circles -->
+  <circle cx="60" cy="65" r="25" fill="#7b8771"/>
+  <circle cx="45" cy="55" r="18" fill="#909c84"/>
+  <circle cx="75" cy="55" r="18" fill="#aebaa4"/>
+  
+  <!-- Simple growth elements -->
+  <circle cx="90" cy="35" r="3" fill="#909c84" opacity="0.7"/>
+  <circle cx="95" cy="45" r="2" fill="#aebaa4" opacity="0.6"/>
+  <circle cx="30" cy="40" r="2.5" fill="#7b8771" opacity="0.6"/>
+</svg>

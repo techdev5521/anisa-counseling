@@ -20,14 +20,21 @@
     },
     "about": {
         "title": "About Anisa Counseling Group",
+        "subtitle": "Learn more about our approach to mental health care and the values that guide our practice.",
         "description": "We are a team of licensed mental health professionals dedicated to providing compassionate, personalized care to individuals, couples, and families. Our approach combines evidence-based therapeutic techniques with a deep understanding of each client's unique needs and circumstances.",
+        "paragraphs": [
+            "Our therapeutic philosophy centers on creating a safe, non-judgmental space where healing can occur naturally. We believe that every individual possesses the inner strength to overcome challenges and find their path to wellness.",
+            "Through collaborative partnership, we guide you in discovering new perspectives, developing coping strategies, and building resilience that will serve you long after our sessions end."
+        ],
         "highlights": [
             "Licensed and experienced therapists",
             "Evidence-based treatment approaches",
             "Warm, welcoming environment",
             "Individual, couples, and family therapy"
         ],
-        "image": "/images/about-office.svg"
+        "images": {
+            "growth": "/images/about-growth.svg"
+        }
     },
     "staff": {
         "title": "Meet Our Team",
