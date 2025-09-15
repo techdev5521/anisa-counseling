@@ -87,7 +87,7 @@ import config from "../siteDetails.json"
       </div>
       
       <!-- Preview of first few team members -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {config.staff.members.slice(0, 4).map((member, index) => (
           <StaffCard 
             member={member} 
