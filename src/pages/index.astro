@@ -1,6 +1,7 @@
 ---
 import Page from "../components/Page.astro"
 import ContactSection from "../components/ContactSection.astro"
+import StaffCard from "../components/StaffCard.astro"
 import config from "../siteDetails.json"
 ---
 
@@ -67,46 +68,33 @@ import config from "../siteDetails.json"
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Meet Our Team Preview -->
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-earth-primary mb-6">
-          {config.services.title}
+          {config.staff.title}
         </h2>
-        <p class="text-xl text-earth-secondary max-w-3xl mx-auto">
-          {config.services.description}
+        <p class="text-xl text-earth-secondary max-w-3xl mx-auto mb-8">
+          {config.staff.description}
         </p>
+        <a 
+          href="/staff"
+          class="inline-block btn-primary px-8 py-4 rounded-lg font-semibold shadow-medium hover:shadow-dark-medium transform hover:scale-105 transition-all duration-200"
+        >
+          Meet Our Team
+        </a>
       </div>
       
+      <!-- Preview of first few team members -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {config.services.list.map((service, index) => {
-          const colors = [
-            'bg-terracotta',
-            'bg-sage-green', 
-            'bg-clay-orange',
-            'bg-forest-brown'
-          ];
-          const bgColor = colors[index % colors.length];
-          
-          return (
-            <div class={`${bgColor} text-white p-6 rounded-lg shadow-medium hover:shadow-dark-medium transition-all duration-200 hover:scale-105`}>
-              <div class="w-16 h-16 mb-4 mx-auto">
-                <img 
-                  src={service.icon} 
-                  alt={`${service.name} icon`} 
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <h3 class="text-xl font-semibold text-center mb-4">
-                {service.name}
-              </h3>
-              <p class="text-center opacity-90">
-                {service.description}
-              </p>
-            </div>
-          );
-        })}
+        {config.staff.members.slice(0, 4).map((member, index) => (
+          <StaffCard 
+            member={member} 
+            variant="preview" 
+            index={index}
+          />
+        ))}
       </div>
     </div>
   </section>

@@ -152,6 +152,20 @@
   .text-dusty-rose { color: rgb(var(--color-dusty-rose)); }
   .text-moss-green { color: rgb(var(--color-moss-green)); }
   
+  /* Dark theme specific utilities */
+  .bg-dark-clay { background-color: rgb(var(--color-dark-clay)); }
+  .bg-deep-charcoal { background-color: rgb(var(--color-deep-charcoal)); }
+  
+  .text-warm-light-beige { color: rgb(var(--color-warm-light-beige)); }
+  .text-light-warm-beige-alt { color: rgb(var(--color-light-warm-beige-alt)); }
+  .text-light-sage { color: rgb(var(--color-light-sage)); }
+  .text-light-terracotta { color: rgb(var(--color-light-terracotta)); }
+  
+  .bg-light-sage { background-color: rgb(var(--color-light-sage)); }
+  .bg-light-terracotta { background-color: rgb(var(--color-light-terracotta)); }
+  
+  .text-deep-charcoal { color: rgb(var(--color-deep-charcoal)); }
+  
   /* High-contrast button utilities */
   .btn-primary {
     background-color: rgb(var(--btn-primary-bg));

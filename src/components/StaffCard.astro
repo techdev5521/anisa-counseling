@@ -1,0 +1,104 @@
+---
+export interface Props {
+  member: {
+    name: string;
+    title: string;
+    credentials: string;
+    image: string;
+    description: string;
+    specialties: string[];
+    approach: string;
+  };
+  variant?: "card" | "preview";
+  index?: number;
+  backgroundColor?: string;
+}
+
+const { member, variant = "card", index = 0, backgroundColor } = Astro.props;
+
+// Card variant classes for different display styles
+const cardVariantClasses = {
+  card: "bg-cream dark:bg-dark-clay rounded-lg shadow-medium overflow-hidden hover:shadow-dark-medium transition-all duration-200",
+  preview: "text-white p-6 rounded-lg shadow-medium hover:shadow-dark-medium transition-all duration-200 hover:scale-105"
+};
+
+// Default preview colors
+const defaultColors = [
+  'bg-terracotta',
+  'bg-sage-green', 
+  'bg-clay-orange',
+  'bg-forest-brown'
+];
+
+const bgColor = backgroundColor || defaultColors[index % defaultColors.length];
+---
+
+{variant === "card" ? (
+  <div class={cardVariantClasses.card}>
+    <div class="w-full">
+      <img 
+        src={member.image} 
+        alt={`${member.name} - ${member.title}`}
+        class="w-full h-64 object-cover"
+      />
+    </div>
+    <div class="p-6 md:p-8">
+      <div class="mb-4">
+        <h3 class="text-2xl font-bold text-forest-brown dark:text-warm-light-beige mb-1">
+          {member.name}
+        </h3>
+        <p class="text-lg text-sage-green dark:text-light-sage font-semibold mb-1">
+          {member.title}
+        </p>
+        <p class="text-sm text-earth-secondary dark:text-light-warm-beige-alt font-medium">
+          {member.credentials}
+        </p>
+      </div>
+      
+      <p class="text-earth-secondary dark:text-light-warm-beige-alt mb-6 leading-relaxed">
+        {member.description}
+      </p>
+      
+      <div class="mb-4">
+        <h4 class="text-sm font-semibold text-forest-brown dark:text-warm-light-beige mb-2 uppercase tracking-wide">
+          Specialties
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          {member.specialties.map((specialty) => (
+            <span class="bg-sage-green dark:bg-light-sage text-white dark:text-deep-charcoal px-3 py-1 rounded-full text-sm">
+              {specialty}
+            </span>
+          ))}
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="text-sm font-semibold text-forest-brown dark:text-warm-light-beige mb-2 uppercase tracking-wide">
+          Therapeutic Approach
+        </h4>
+        <p class="text-sm text-earth-secondary dark:text-light-warm-beige-alt italic">
+          {member.approach}
+        </p>
+      </div>
+    </div>
+  </div>
+) : (
+  <div class={`${bgColor} ${cardVariantClasses.preview}`}>
+    <div class="w-20 h-20 mb-4 mx-auto rounded-full overflow-hidden">
+      <img 
+        src={member.image} 
+        alt={`${member.name}`} 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <h3 class="text-xl font-semibold text-center mb-2">
+      {member.name}
+    </h3>
+    <p class="text-center opacity-90 text-sm mb-2">
+      {member.title}
+    </p>
+    <p class="text-center opacity-80 text-xs">
+      {member.credentials}
+    </p>
+  </div>
+)}

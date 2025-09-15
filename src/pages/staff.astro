@@ -1,0 +1,38 @@
+---
+import Page from "../components/Page.astro"
+import ContactSection from "../components/ContactSection.astro"
+import StaffCard from "../components/StaffCard.astro"
+import config from "../siteDetails.json"
+---
+
+<Page>
+  <!-- Page Header -->
+  <section class="bg-earth-primary dark:bg-deep-charcoal py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold text-earth-primary dark:text-warm-light-beige mb-6">
+        {config.staff.title}
+      </h1>
+      <p class="text-xl text-earth-secondary dark:text-light-warm-beige-alt max-w-3xl mx-auto">
+        {config.staff.description}
+      </p>
+    </div>
+  </section>
+
+  <!-- Staff Members -->
+  <section class="py-20 bg-soft-sand dark:bg-dark-clay">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {config.staff.members.map((member, index) => (
+          <StaffCard 
+            member={member} 
+            variant="card" 
+            index={index}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <ContactSection />
+</Page>

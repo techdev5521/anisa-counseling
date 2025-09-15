@@ -1,0 +1,33 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle-lisa">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#ba998d"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="85" r="35" fill="#faf8f6"/>
+  
+  <!-- Hair -->
+  <ellipse cx="100" cy="60" rx="42" ry="28" fill="#5c4c3d"/>
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="80" r="3" fill="#5c4c3d"/>
+  <circle cx="110" cy="80" r="3" fill="#5c4c3d"/>
+  
+  <!-- Smile -->
+  <path d="M 88 95 Q 100 105 112 95" stroke="#5c4c3d" stroke-width="2" fill="none"/>
+  
+  <!-- Professional attire -->
+  <rect x="70" y="120" width="60" height="80" fill="#7b8771" clip-path="url(#circle-lisa)"/>
+  
+  <!-- Collar -->
+  <path d="M 85 125 L 100 135 L 115 125" fill="#f2ede6" clip-path="url(#circle-lisa)"/>
+  
+  <!-- Abstract professional elements -->
+  <circle cx="75" cy="150" r="4" fill="#b46c55" opacity="0.6"/>
+  <circle cx="125" cy="145" r="5" fill="#ccb066" opacity="0.5"/>
+</svg>

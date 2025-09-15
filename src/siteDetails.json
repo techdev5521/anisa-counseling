@@ -6,7 +6,7 @@
     "navigation": [
         { "name": "Home", "path": "/" },
         { "name": "About", "path": "/about" },
-        { "name": "Services", "path": "/services" },
+        { "name": "Staff", "path": "/staff" },
         { "name": "Contact", "path": "/contact" }
     ],
     "hero": {
@@ -29,29 +29,51 @@
         ],
         "image": "/images/about-office.svg"
     },
-    "services": {
-        "title": "Our Services",
-        "description": "We offer a comprehensive range of mental health services tailored to meet your specific needs.",
-        "list": [
+    "staff": {
+        "title": "Meet Our Team",
+        "description": "Our compassionate team of licensed therapists brings diverse backgrounds and specialties to provide you with the best possible care.",
+        "members": [
             {
-                "name": "Individual Therapy",
-                "description": "One-on-one sessions focused on your personal growth and healing journey.",
-                "icon": "/images/individual-therapy.svg"
+                "name": "Dr. Sarah Johnson",
+                "title": "Clinical Director",
+                "credentials": "PhD, LMFT",
+                "image": "/images/staff-sarah.svg",
+                "description": "Dr. Johnson has over 15 years of experience in family and couples therapy. She specializes in attachment-based interventions and trauma-informed care.",
+                "specialties": [
+                    "Couples Therapy",
+                    "Family Therapy",
+                    "Trauma Recovery",
+                    "Attachment Issues"
+                ],
+                "approach": "Emotionally Focused Therapy (EFT), Gottman Method"
             },
             {
-                "name": "Couples Therapy",
-                "description": "Strengthen your relationship with guided communication and conflict resolution.",
-                "icon": "/images/couples-therapy.svg"
+                "name": "Michael Chen",
+                "title": "Licensed Therapist",
+                "credentials": "LMHC, MA",
+                "image": "/images/staff-michael.svg",
+                "description": "Michael brings a holistic approach to therapy, combining cognitive-behavioral techniques with mindfulness practices to help clients achieve lasting change.",
+                "specialties": [
+                    "Anxiety & Depression",
+                    "Mindfulness-Based Therapy",
+                    "Young Adults",
+                    "Life Transitions"
+                ],
+                "approach": "CBT, Mindfulness-Based Stress Reduction (MBSR)"
             },
             {
-                "name": "Family Therapy",
-                "description": "Improve family dynamics and create healthier relationships for all members.",
-                "icon": "/images/family-therapy.svg"
-            },
-            {
-                "name": "Group Therapy",
-                "description": "Connect with others facing similar challenges in a supportive group setting.",
-                "icon": "/images/group-therapy.svg"
+                "name": "Lisa Rodriguez",
+                "title": "Licensed Clinical Social Worker",
+                "credentials": "LCSW, MSW",
+                "image": "/images/staff-lisa.svg",
+                "description": "Lisa specializes in working with adolescents and young adults, helping them navigate the challenges of identity development and mental health.",
+                "specialties": [
+                    "Adolescent Therapy",
+                    "Identity Development",
+                    "LGBTQ+ Affirming Care",
+                    "Self-Esteem & Body Image"
+                ],
+                "approach": "Person-Centered Therapy, Dialectical Behavior Therapy (DBT)"
             }
         ]
     },
