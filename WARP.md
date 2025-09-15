@@ -46,7 +46,10 @@ npx astro add     # Add integrations (e.g., npx astro add react)
 The project follows a simple layout pattern:
 1. **Base Layout**: `Page.astro` provides the HTML structure, imports global styles, and uses site configuration from `siteDetails.json`
 2. **Pages**: Individual pages import and wrap content in the `Page` component
-3. **Slot Pattern**: Components use Astro's slot system for content composition
+3. **Reusable Components**: 
+   - `Navigation.astro` - Site navigation with mobile menu
+   - `ContactSection.astro` - Reusable contact information section
+4. **Slot Pattern**: Components use Astro's slot system for content composition
 
 ### Configuration Notes
 - TailwindCSS is integrated via the Vite plugin rather than as an Astro integration
@@ -58,3 +61,20 @@ The project follows a simple layout pattern:
 - Global styles are imported through the base `Page` component
 - Static assets go in `public/` and are served from the root path
 - All pages should use the `Page` component wrapper for consistency
+
+### ContactSection Component Usage
+The `ContactSection` component can be reused across different pages with various configurations:
+
+```astro
+<!-- Default usage (shows hours, terracotta background) -->
+<ContactSection />
+
+<!-- Without hours -->
+<ContactSection showHours={false} />
+
+<!-- Different background color -->
+<ContactSection backgroundColor="bg-sage-green" />
+
+<!-- Compact variant without hours -->
+<ContactSection variant="compact" showHours={false} backgroundColor="bg-forest-brown" />
+```

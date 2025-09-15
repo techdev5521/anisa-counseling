@@ -1,0 +1,40 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #654434; }
+    .secondary { fill: #8b7355; }
+    .accent { fill: #a0845c; }
+    @media (prefers-color-scheme: dark) {
+      .primary { fill: #e6d7c7; }
+      .secondary { fill: #b8a286; }
+      .accent { fill: #d4b896; }
+    }
+  </style>
+  
+  <!-- Family group of 4 people -->
+  <!-- Parent 1 (taller) -->
+  <circle cx="60" cy="50" r="18" class="primary"/>
+  <rect x="50" y="68" width="20" height="35" rx="10" class="secondary"/>
+  <rect x="45" y="103" width="30" height="45" rx="15" class="accent"/>
+  
+  <!-- Parent 2 (taller) -->
+  <circle cx="140" cy="50" r="18" class="secondary"/>
+  <rect x="130" y="68" width="20" height="35" rx="10" class="primary"/>
+  <rect x="125" y="103" width="30" height="45" rx="15" class="accent"/>
+  
+  <!-- Child 1 (smaller) -->
+  <circle cx="85" cy="70" r="12" class="accent"/>
+  <rect x="79" y="82" width="12" height="25" rx="6" class="primary"/>
+  <rect x="76" y="107" width="18" height="30" rx="9" class="secondary"/>
+  
+  <!-- Child 2 (smaller) -->
+  <circle cx="115" cy="70" r="12" class="primary"/>
+  <rect x="109" y="82" width="12" height="25" rx="6" class="accent"/>
+  <rect x="106" y="107" width="18" height="30" rx="9" class="secondary"/>
+  
+  <!-- Connecting circle around them (unity) -->
+  <circle cx="100" cy="90" r="65" fill="none" stroke="#a0845c" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Small hearts for love -->
+  <path d="M100 25 Q97 20 94 25 Q91 20 88 25 Q91 30 94 35 Q97 30 100 25" class="accent" opacity="0.5"/>
+  <path d="M112 25 Q109 20 106 25 Q103 20 100 25 Q103 30 106 35 Q109 30 112 25" class="accent" opacity="0.5"/>
+</svg>

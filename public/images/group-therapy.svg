@@ -1,0 +1,46 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #654434; }
+    .secondary { fill: #8b7355; }
+    .accent { fill: #a0845c; }
+    @media (prefers-color-scheme: dark) {
+      .primary { fill: #e6d7c7; }
+      .secondary { fill: #b8a286; }
+      .accent { fill: #d4b896; }
+    }
+  </style>
+  
+  <!-- People arranged in a circle -->
+  <!-- Person 1 (top) -->
+  <circle cx="100" cy="40" r="15" class="primary"/>
+  <rect x="92" y="55" width="16" height="25" rx="8" class="secondary"/>
+  
+  <!-- Person 2 (right) -->
+  <circle cx="150" cy="80" r="15" class="secondary"/>
+  <rect x="142" y="95" width="16" height="25" rx="8" class="accent"/>
+  
+  <!-- Person 3 (bottom right) -->
+  <circle cx="140" cy="140" r="15" class="accent"/>
+  <rect x="132" y="155" width="16" height="25" rx="8" class="primary"/>
+  
+  <!-- Person 4 (bottom left) -->
+  <circle cx="60" cy="140" r="15" class="primary"/>
+  <rect x="52" y="155" width="16" height="25" rx="8" class="secondary"/>
+  
+  <!-- Person 5 (left) -->
+  <circle cx="50" cy="80" r="15" class="secondary"/>
+  <rect x="42" y="95" width="16" height="25" rx="8" class="accent"/>
+  
+  <!-- Center connection point -->
+  <circle cx="100" cy="100" r="8" class="accent" opacity="0.5"/>
+  
+  <!-- Connection lines (subtle) -->
+  <line x1="100" y1="65" x2="100" y2="92" stroke="#a0845c" stroke-width="1" opacity="0.3"/>
+  <line x1="135" y1="92" x2="108" y2="108" stroke="#a0845c" stroke-width="1" opacity="0.3"/>
+  <line x1="125" y1="130" x2="108" y2="108" stroke="#a0845c" stroke-width="1" opacity="0.3"/>
+  <line x1="75" y1="130" x2="92" y2="108" stroke="#a0845c" stroke-width="1" opacity="0.3"/>
+  <line x1="65" y1="92" x2="92" y2="108" stroke="#a0845c" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Outer circle for unity -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#8b7355" stroke-width="1" opacity="0.2"/>
+</svg>

@@ -1,0 +1,88 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #5c4c3d; }
+    .secondary { fill: #654434; }
+    .accent { fill: #c18d67; }
+    .terracotta { fill: #b46c55; }
+    .sage { fill: #909c84; }
+    .ochre { fill: #ccb066; }
+    .light { fill: #faf8f6; }
+    .warm { fill: #f2ede6; }
+    .stone { fill: #9c978f; }
+    @media (prefers-color-scheme: dark) {
+      .primary { fill: #e6d7c7; }
+      .secondary { fill: #b8a286; }
+      .accent { fill: #d28a73; }
+      .terracotta { fill: #d28a73; }
+      .sage { fill: #aebaa4; }
+      .ochre { fill: #d4b896; }
+      .light { fill: #231e1a; }
+      .warm { fill: #382f27; }
+      .stone { fill: #4a3f36; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect width="800" height="600" class="light"/>
+  
+  <!-- Office interior -->
+  <!-- Floor -->
+  <rect x="0" y="400" width="800" height="200" class="warm"/>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="400" class="light"/>
+  
+  <!-- Couch -->
+  <rect x="100" y="320" width="200" height="80" rx="15" class="terracotta"/>
+  <circle cx="130" cy="310" r="25" class="terracotta"/>
+  <circle cx="200" cy="310" r="25" class="terracotta"/>
+  <circle cx="270" cy="310" r="25" class="terracotta"/>
+  
+  <!-- Coffee table -->
+  <ellipse cx="250" cy="450" rx="80" ry="40" class="ochre"/>
+  
+  <!-- Bookshelf -->
+  <rect x="600" y="150" width="150" height="250" class="stone"/>
+  <rect x="610" y="160" width="130" height="30" class="primary"/>
+  <rect x="610" y="200" width="130" height="30" class="secondary"/>
+  <rect x="610" y="240" width="130" height="30" class="accent"/>
+  <rect x="610" y="280" width="130" height="30" class="primary"/>
+  <rect x="610" y="320" width="130" height="30" class="secondary"/>
+  
+  <!-- Plant -->
+  <ellipse cx="500" cy="380" rx="30" ry="40" class="sage"/>
+  <circle cx="485" cy="340" r="15" class="sage"/>
+  <circle cx="500" cy="335" r="18" class="sage"/>
+  <circle cx="515" cy="340" r="15" class="sage"/>
+  
+  <!-- Window with light -->
+  <rect x="50" y="50" width="200" height="150" rx="10" class="warm"/>
+  <rect x="60" y="60" width="180" height="130" rx="5" opacity="0.3" fill="#f7f5f3"/>
+  
+  <!-- Two people in conversation -->
+  <!-- Therapist -->
+  <circle cx="400" cy="280" r="30" class="accent"/>
+  <rect x="385" y="310" width="30" height="50" rx="15" class="sage"/>
+  <rect x="380" y="360" width="40" height="60" rx="20" class="ochre"/>
+  
+  <!-- Client -->
+  <circle cx="180" cy="280" r="28" class="terracotta"/>
+  <rect x="167" y="308" width="26" height="45" rx="13" class="stone"/>
+  <rect x="162" y="353" width="36" height="55" rx="18" class="accent"/>
+  
+  <!-- Peaceful elements -->
+  <!-- Zen stones -->
+  <ellipse cx="700" cy="450" rx="15" ry="8" class="stone"/>
+  <ellipse cx="720" cy="445" rx="12" ry="6" class="ochre"/>
+  <ellipse cx="705" cy="435" rx="10" ry="5" class="sage"/>
+  
+  <!-- Soft lighting effect -->
+  <circle cx="400" cy="100" r="100" fill="url(#lightGradient)" opacity="0.2"/>
+  
+  <defs>
+    <radialGradient id="lightGradient">
+      <stop offset="0%" stop-color="#f7f5f3"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+</svg>

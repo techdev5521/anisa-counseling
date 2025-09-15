@@ -1,9 +1,72 @@
 {
     "name": "Anisa Counseling Group",
+    "tagline": "Compassionate Care for Mental Wellness",
+    "phone": "(765) 555-0123",
+    "email": "info@anisacounseling.com",
     "navigation": [
-        {
-            "name": "Home",
-            "path": "/"
+        { "name": "Home", "path": "/" },
+        { "name": "About", "path": "/about" },
+        { "name": "Services", "path": "/services" },
+        { "name": "Contact", "path": "/contact" }
+    ],
+    "hero": {
+        "title": "Professional Counseling Services in West Lafayette",
+        "subtitle": "Take the first step towards healing and growth with compassionate, evidence-based therapy in a warm and welcoming environment.",
+        "cta": {
+            "text": "Schedule a Consultation",
+            "link": "/contact"
+        },
+        "image": "/images/hero-therapy.svg"
+    },
+    "about": {
+        "title": "About Anisa Counseling Group",
+        "description": "We are a team of licensed mental health professionals dedicated to providing compassionate, personalized care to individuals, couples, and families. Our approach combines evidence-based therapeutic techniques with a deep understanding of each client's unique needs and circumstances.",
+        "highlights": [
+            "Licensed and experienced therapists",
+            "Evidence-based treatment approaches",
+            "Warm, welcoming environment",
+            "Individual, couples, and family therapy"
+        ],
+        "image": "/images/about-office.svg"
+    },
+    "services": {
+        "title": "Our Services",
+        "description": "We offer a comprehensive range of mental health services tailored to meet your specific needs.",
+        "list": [
+            {
+                "name": "Individual Therapy",
+                "description": "One-on-one sessions focused on your personal growth and healing journey.",
+                "icon": "/images/individual-therapy.svg"
+            },
+            {
+                "name": "Couples Therapy",
+                "description": "Strengthen your relationship with guided communication and conflict resolution.",
+                "icon": "/images/couples-therapy.svg"
+            },
+            {
+                "name": "Family Therapy",
+                "description": "Improve family dynamics and create healthier relationships for all members.",
+                "icon": "/images/family-therapy.svg"
+            },
+            {
+                "name": "Group Therapy",
+                "description": "Connect with others facing similar challenges in a supportive group setting.",
+                "icon": "/images/group-therapy.svg"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get Started Today",
+        "description": "Ready to take the first step? Contact us to schedule your initial consultation.",
+        "address": "123 Wellness Way, West Lafayette, IN 47906",
+        "hours": {
+            "monday": "9:00 AM - 7:00 PM",
+            "tuesday": "9:00 AM - 7:00 PM",
+            "wednesday": "9:00 AM - 7:00 PM",
+            "thursday": "9:00 AM - 7:00 PM",
+            "friday": "9:00 AM - 7:00 PM",
+            "saturday": "9:00 AM - 4:00 PM",
+            "sunday": "Closed"
         }
-    ]
+    }
 }

@@ -12,69 +12,198 @@
     --color-muted-earth: 139 115 85;         /* #8b7355 - Secondary text */
     --color-golden-earth: 160 132 92;        /* #a0845c - Accent color */
     
+    /* Extended Earth Tone Palette */
+    --color-terracotta: 180 108 85;          /* #b46c55 - Warm reddish brown */
+    --color-sage-green: 144 156 132;         /* #909c84 - Muted natural green */
+    --color-clay-orange: 193 141 103;        /* #c18d67 - Earthy orange */
+    --color-stone-gray: 156 151 143;         /* #9c978f - Natural stone */
+    --color-warm-ochre: 204 176 102;         /* #ccb066 - Golden ochre */
+    --color-forest-brown: 92 76 61;          /* #5c4c3d - Deep forest brown */
+    --color-dusty-rose: 186 153 141;         /* #ba998d - Muted rose earth tone */
+    --color-moss-green: 123 135 113;         /* #7b8771 - Soft moss green */
+    
     /* Light Theme Backgrounds */
     --color-warm-off-white: 247 245 243;     /* #f7f5f3 - Primary background */
     --color-warm-beige: 214 199 181;         /* #d6c7b5 - Borders, dividers */
     --color-light-warm-beige: 230 221 211;   /* #e6ddd3 - Subtle backgrounds */
     --color-very-light-warm-beige: 237 231 224; /* #ede7e0 - Hover states */
+    --color-cream: 250 248 246;              /* #faf8f6 - Ultra-light background */
+    --color-soft-sand: 242 237 230;          /* #f2ede6 - Light sand tone */
     
-    /* Dark Theme Base Colors (will be overridden in dark mode) */
+    /* Dark Theme Base Colors */
     --color-dark-earth: 45 37 32;            /* #2d2520 - Dark primary background */
     --color-darker-warm-brown: 74 63 54;     /* #4a3f36 - Dark borders */
     --color-dark-warm-brown: 61 52 42;       /* #3d342a - Dark hover states */
+    --color-deep-charcoal: 35 30 26;         /* #231e1a - Very dark background */
+    --color-dark-clay: 56 47 39;             /* #382f27 - Dark clay tone */
     
     /* Dark Theme Text Base Colors */
     --color-warm-light-beige: 230 215 199;   /* #e6d7c7 - Dark primary text */
     --color-light-warm-beige-alt: 184 162 134; /* #b8a286 - Dark secondary text */
     --color-golden-beige: 212 184 150;       /* #d4b896 - Dark accent color */
+    --color-light-sage: 174 186 164;         /* #aebaa4 - Light sage for dark mode */
+    --color-light-terracotta: 210 138 115;   /* #d28a73 - Light terracotta for dark mode */
+    
+    /* Button Colors for High Contrast */
+    --color-button-primary: 74 63 54;           /* #4a3f36 - Dark brown for light mode */
+    --color-button-primary-hover: 92 76 61;     /* #5c4c3d - Darker on hover */
+    --color-button-secondary: 180 108 85;       /* #b46c55 - Terracotta */
+    --color-button-secondary-hover: 160 95 75;  /* #a05f4b - Darker terracotta */
+    --color-button-accent: 123 135 113;         /* #7b8771 - Moss green */
+    --color-button-accent-hover: 108 119 99;    /* #6c7763 - Darker moss */
     
     /* Semantic Color Mappings for Light Mode */
-    --bg-primary: var(--color-warm-off-white);
-    --bg-secondary: var(--color-very-light-warm-beige);
+    --bg-primary: var(--color-cream);
+    --bg-secondary: var(--color-soft-sand);
     --bg-accent: var(--color-light-warm-beige);
+    --bg-terracotta: var(--color-terracotta);
+    --bg-sage: var(--color-sage-green);
     
-    --text-primary: var(--color-warm-brown);
-    --text-secondary: var(--color-muted-earth);
-    --text-accent: var(--color-golden-earth);
+    --text-primary: var(--color-forest-brown);
+    --text-secondary: var(--color-warm-brown);
+    --text-accent: var(--color-clay-orange);
+    --text-terracotta: var(--color-terracotta);
+    --text-sage: var(--color-moss-green);
     
-    --border-primary: var(--color-warm-beige);
-    --border-secondary: var(--color-very-light-warm-beige);
+    --border-primary: var(--color-stone-gray);
+    --border-secondary: var(--color-warm-beige);
+    
+    /* Button Semantic Mappings */
+    --btn-primary-bg: var(--color-button-primary);
+    --btn-primary-hover: var(--color-button-primary-hover);
+    --btn-secondary-bg: var(--color-button-secondary);
+    --btn-secondary-hover: var(--color-button-secondary-hover);
+    --btn-accent-bg: var(--color-button-accent);
+    --btn-accent-hover: var(--color-button-accent-hover);
   }
 
   /* Dark Mode Color Overrides */
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg-primary: var(--color-dark-earth);
-      --bg-secondary: var(--color-dark-warm-brown);
-      --bg-accent: var(--color-darker-warm-brown);
+      /* Dark Mode Button Colors - Brighter for contrast */
+      --color-button-primary-dark: 230 215 199;      /* #e6d7c7 - Light beige */
+      --color-button-primary-hover-dark: 212 184 150; /* #d4b896 - Golden beige */
+      --color-button-secondary-dark: 210 138 115;    /* #d28a73 - Light terracotta */
+      --color-button-secondary-hover-dark: 225 153 130; /* #e1998f - Lighter terracotta */
+      --color-button-accent-dark: 174 186 164;       /* #aebaa4 - Light sage */
+      --color-button-accent-hover-dark: 189 201 179; /* #bdc9b3 - Lighter sage */
+      
+      --bg-primary: var(--color-deep-charcoal);
+      --bg-secondary: var(--color-dark-clay);
+      --bg-accent: var(--color-dark-warm-brown);
+      --bg-terracotta: var(--color-dark-earth);
+      --bg-sage: var(--color-darker-warm-brown);
       
       --text-primary: var(--color-warm-light-beige);
       --text-secondary: var(--color-light-warm-beige-alt);
-      --text-accent: var(--color-golden-beige);
+      --text-accent: var(--color-light-terracotta);
+      --text-terracotta: var(--color-light-terracotta);
+      --text-sage: var(--color-light-sage);
       
       --border-primary: var(--color-darker-warm-brown);
       --border-secondary: var(--color-dark-warm-brown);
+      
+      /* Dark Mode Button Mappings */
+      --btn-primary-bg: var(--color-button-primary-dark);
+      --btn-primary-hover: var(--color-button-primary-hover-dark);
+      --btn-secondary-bg: var(--color-button-secondary-dark);
+      --btn-secondary-hover: var(--color-button-secondary-hover-dark);
+      --btn-accent-bg: var(--color-button-accent-dark);
+      --btn-accent-hover: var(--color-button-accent-hover-dark);
     }
   }
 }
 
 @layer components {
-  /* Utility classes using the color scheme */
+  /* Primary earth tone utilities */
   .bg-earth-primary { background-color: rgb(var(--bg-primary)); }
   .bg-earth-secondary { background-color: rgb(var(--bg-secondary)); }
   .bg-earth-accent { background-color: rgb(var(--bg-accent)); }
+  .bg-earth-terracotta { background-color: rgb(var(--bg-terracotta)); }
+  .bg-earth-sage { background-color: rgb(var(--bg-sage)); }
   
   .text-earth-primary { color: rgb(var(--text-primary)); }
   .text-earth-secondary { color: rgb(var(--text-secondary)); }
   .text-earth-accent { color: rgb(var(--text-accent)); }
+  .text-earth-terracotta { color: rgb(var(--text-terracotta)); }
+  .text-earth-sage { color: rgb(var(--text-sage)); }
   
   .border-earth-primary { border-color: rgb(var(--border-primary)); }
   .border-earth-secondary { border-color: rgb(var(--border-secondary)); }
   
-  .shadow-light { box-shadow: 0 1px 3px rgba(101, 84, 68, 0.1); }
-  .shadow-dark { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
-  .shadow-medium { box-shadow: 0 4px 6px rgba(101, 84, 68, 0.1); }
-  .shadow-dark-medium { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); }
+  /* Direct color utilities for more variety */
+  .bg-terracotta { background-color: rgb(var(--color-terracotta)); }
+  .bg-sage-green { background-color: rgb(var(--color-sage-green)); }
+  .bg-clay-orange { background-color: rgb(var(--color-clay-orange)); }
+  .bg-stone-gray { background-color: rgb(var(--color-stone-gray)); }
+  .bg-warm-ochre { background-color: rgb(var(--color-warm-ochre)); }
+  .bg-forest-brown { background-color: rgb(var(--color-forest-brown)); }
+  .bg-dusty-rose { background-color: rgb(var(--color-dusty-rose)); }
+  .bg-moss-green { background-color: rgb(var(--color-moss-green)); }
+  .bg-cream { background-color: rgb(var(--color-cream)); }
+  .bg-soft-sand { background-color: rgb(var(--color-soft-sand)); }
+  
+  .text-terracotta { color: rgb(var(--color-terracotta)); }
+  .text-sage-green { color: rgb(var(--color-sage-green)); }
+  .text-clay-orange { color: rgb(var(--color-clay-orange)); }
+  .text-stone-gray { color: rgb(var(--color-stone-gray)); }
+  .text-warm-ochre { color: rgb(var(--color-warm-ochre)); }
+  .text-forest-brown { color: rgb(var(--color-forest-brown)); }
+  .text-dusty-rose { color: rgb(var(--color-dusty-rose)); }
+  .text-moss-green { color: rgb(var(--color-moss-green)); }
+  
+  /* High-contrast button utilities */
+  .btn-primary {
+    background-color: rgb(var(--btn-primary-bg));
+    color: white;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgb(var(--btn-primary-hover));
+  }
+  
+  .btn-secondary {
+    background-color: rgb(var(--btn-secondary-bg));
+    color: white;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgb(var(--btn-secondary-hover));
+  }
+  
+  .btn-accent {
+    background-color: rgb(var(--btn-accent-bg));
+    color: white;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-accent:hover {
+    background-color: rgb(var(--btn-accent-hover));
+  }
+  
+  /* Dark mode button text adjustments */
+  @media (prefers-color-scheme: dark) {
+    .btn-primary {
+      color: rgb(var(--color-deep-charcoal));
+    }
+    
+    .btn-secondary {
+      color: rgb(var(--color-deep-charcoal));
+    }
+    
+    .btn-accent {
+      color: rgb(var(--color-deep-charcoal));
+    }
+  }
+  
+  .shadow-light { box-shadow: 0 1px 3px rgba(74, 63, 54, 0.15); }
+  .shadow-dark { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+  .shadow-medium { box-shadow: 0 4px 6px rgba(74, 63, 54, 0.15); }
+  .shadow-dark-medium { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
+  .shadow-large { box-shadow: 0 10px 25px rgba(74, 63, 54, 0.15); }
+  .shadow-dark-large { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
   
   .sr-only {
     position: absolute;

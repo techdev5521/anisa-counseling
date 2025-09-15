@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #654434; }
+    .secondary { fill: #8b7355; }
+    .accent { fill: #a0845c; }
+    @media (prefers-color-scheme: dark) {
+      .primary { fill: #e6d7c7; }
+      .secondary { fill: #b8a286; }
+      .accent { fill: #d4b896; }
+    }
+  </style>
+  
+  <!-- Two people side by side -->
+  <!-- Person 1 -->
+  <circle cx="75" cy="60" r="20" class="primary"/>
+  <rect x="65" y="80" width="20" height="30" rx="10" class="secondary"/>
+  <rect x="60" y="110" width="30" height="40" rx="15" class="accent"/>
+  
+  <!-- Person 2 -->
+  <circle cx="125" cy="60" r="20" class="secondary"/>
+  <rect x="115" y="80" width="20" height="30" rx="10" class="primary"/>
+  <rect x="110" y="110" width="30" height="40" rx="15" class="accent"/>
+  
+  <!-- Heart symbol between them -->
+  <path d="M95 90 Q90 85 85 90 Q80 85 75 90 Q80 95 85 100 Q90 95 95 90" class="accent" opacity="0.7"/>
+  <path d="M125 90 Q120 85 115 90 Q110 85 105 90 Q110 95 115 100 Q120 95 125 90" class="accent" opacity="0.7"/>
+  
+  <!-- Connection line -->
+  <line x1="85" y1="95" x2="115" y2="95" stroke="#a0845c" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Peaceful elements -->
+  <circle cx="40" cy="40" r="5" class="accent" opacity="0.6"/>
+  <circle cx="160" cy="45" r="6" class="primary" opacity="0.6"/>
+  <circle cx="30" cy="160" r="4" class="secondary" opacity="0.6"/>
+  <circle cx="170" cy="155" r="5" class="accent" opacity="0.6"/>
+</svg>

@@ -1,7 +1,116 @@
 ---
 import Page from "../components/Page.astro"
+import ContactSection from "../components/ContactSection.astro"
+import config from "../siteDetails.json"
 ---
 
 <Page>
-    
+  <!-- Hero Section -->
+  <section class="bg-earth-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="lg:pr-8">
+          <h1 class="text-4xl lg:text-5xl font-bold text-earth-primary mb-6 leading-tight">
+            {config.hero.title}
+          </h1>
+          <p class="text-xl text-earth-secondary mb-8 leading-relaxed">
+            {config.hero.subtitle}
+          </p>
+          <a 
+            href={config.hero.cta.link}
+            class="inline-block btn-primary px-8 py-4 rounded-lg font-semibold shadow-medium hover:shadow-dark-medium transform hover:scale-105"
+          >
+            {config.hero.cta.text}
+          </a>
+        </div>
+        <div class="lg:pl-8">
+          <img 
+            src={config.hero.image} 
+            alt="Professional therapy environment" 
+            class="w-full h-auto rounded-lg shadow-medium"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-soft-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="lg:order-2">
+          <h2 class="text-3xl lg:text-4xl font-bold text-forest-brown mb-6">
+            {config.about.title}
+          </h2>
+          <p class="text-lg text-earth-secondary mb-8 leading-relaxed">
+            {config.about.description}
+          </p>
+          <ul class="space-y-4">
+            {config.about.highlights.map((highlight) => (
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-sage-green mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-earth-secondary">{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="lg:order-1">
+          <img 
+            src={config.about.image} 
+            alt="Comfortable therapy office" 
+            class="w-full h-auto rounded-lg shadow-medium"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-earth-primary mb-6">
+          {config.services.title}
+        </h2>
+        <p class="text-xl text-earth-secondary max-w-3xl mx-auto">
+          {config.services.description}
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {config.services.list.map((service, index) => {
+          const colors = [
+            'bg-terracotta',
+            'bg-sage-green', 
+            'bg-clay-orange',
+            'bg-forest-brown'
+          ];
+          const bgColor = colors[index % colors.length];
+          
+          return (
+            <div class={`${bgColor} text-white p-6 rounded-lg shadow-medium hover:shadow-dark-medium transition-all duration-200 hover:scale-105`}>
+              <div class="w-16 h-16 mb-4 mx-auto">
+                <img 
+                  src={service.icon} 
+                  alt={`${service.name} icon`} 
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="text-xl font-semibold text-center mb-4">
+                {service.name}
+              </h3>
+              <p class="text-center opacity-90">
+                {service.description}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <ContactSection />
 </Page>

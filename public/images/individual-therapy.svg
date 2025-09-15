@@ -1,0 +1,28 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #654434; }
+    .secondary { fill: #8b7355; }
+    .accent { fill: #a0845c; }
+    @media (prefers-color-scheme: dark) {
+      .primary { fill: #e6d7c7; }
+      .secondary { fill: #b8a286; }
+      .accent { fill: #d4b896; }
+    }
+  </style>
+  
+  <!-- Person sitting in chair -->
+  <circle cx="100" cy="70" r="25" class="primary"/>
+  <rect x="85" y="95" width="30" height="40" rx="15" class="secondary"/>
+  <rect x="80" y="135" width="40" height="50" rx="20" class="accent"/>
+  
+  <!-- Chair -->
+  <rect x="70" y="130" width="60" height="60" rx="15" class="secondary" opacity="0.3"/>
+  <rect x="65" y="120" width="10" height="50" rx="5" class="secondary" opacity="0.5"/>
+  <rect x="125" y="120" width="10" height="50" rx="5" class="secondary" opacity="0.5"/>
+  
+  <!-- Peaceful elements around -->
+  <circle cx="50" cy="50" r="8" class="accent" opacity="0.6"/>
+  <circle cx="150" cy="60" r="6" class="primary" opacity="0.6"/>
+  <circle cx="40" cy="150" r="5" class="secondary" opacity="0.6"/>
+  <circle cx="160" cy="140" r="7" class="accent" opacity="0.6"/>
+</svg>
