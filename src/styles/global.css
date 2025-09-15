@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* 
+ * Anisa Counseling Group - Earth Tone Color Scheme
+ * Integrated with Tailwind CSS custom properties
+ */
+
+@layer base {
+  :root {
+    /* Primary Earth Tones */
+    --color-warm-brown: 101 84 68;           /* #654434 - Primary brand color */
+    --color-muted-earth: 139 115 85;         /* #8b7355 - Secondary text */
+    --color-golden-earth: 160 132 92;        /* #a0845c - Accent color */
+    
+    /* Light Theme Backgrounds */
+    --color-warm-off-white: 247 245 243;     /* #f7f5f3 - Primary background */
+    --color-warm-beige: 214 199 181;         /* #d6c7b5 - Borders, dividers */
+    --color-light-warm-beige: 230 221 211;   /* #e6ddd3 - Subtle backgrounds */
+    --color-very-light-warm-beige: 237 231 224; /* #ede7e0 - Hover states */
+    
+    /* Dark Theme Base Colors (will be overridden in dark mode) */
+    --color-dark-earth: 45 37 32;            /* #2d2520 - Dark primary background */
+    --color-darker-warm-brown: 74 63 54;     /* #4a3f36 - Dark borders */
+    --color-dark-warm-brown: 61 52 42;       /* #3d342a - Dark hover states */
+    
+    /* Dark Theme Text Base Colors */
+    --color-warm-light-beige: 230 215 199;   /* #e6d7c7 - Dark primary text */
+    --color-light-warm-beige-alt: 184 162 134; /* #b8a286 - Dark secondary text */
+    --color-golden-beige: 212 184 150;       /* #d4b896 - Dark accent color */
+    
+    /* Semantic Color Mappings for Light Mode */
+    --bg-primary: var(--color-warm-off-white);
+    --bg-secondary: var(--color-very-light-warm-beige);
+    --bg-accent: var(--color-light-warm-beige);
+    
+    --text-primary: var(--color-warm-brown);
+    --text-secondary: var(--color-muted-earth);
+    --text-accent: var(--color-golden-earth);
+    
+    --border-primary: var(--color-warm-beige);
+    --border-secondary: var(--color-very-light-warm-beige);
+  }
+
+  /* Dark Mode Color Overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: var(--color-dark-earth);
+      --bg-secondary: var(--color-dark-warm-brown);
+      --bg-accent: var(--color-darker-warm-brown);
+      
+      --text-primary: var(--color-warm-light-beige);
+      --text-secondary: var(--color-light-warm-beige-alt);
+      --text-accent: var(--color-golden-beige);
+      
+      --border-primary: var(--color-darker-warm-brown);
+      --border-secondary: var(--color-dark-warm-brown);
+    }
+  }
+}
+
+@layer components {
+  /* Utility classes using the color scheme */
+  .bg-earth-primary { background-color: rgb(var(--bg-primary)); }
+  .bg-earth-secondary { background-color: rgb(var(--bg-secondary)); }
+  .bg-earth-accent { background-color: rgb(var(--bg-accent)); }
+  
+  .text-earth-primary { color: rgb(var(--text-primary)); }
+  .text-earth-secondary { color: rgb(var(--text-secondary)); }
+  .text-earth-accent { color: rgb(var(--text-accent)); }
+  
+  .border-earth-primary { border-color: rgb(var(--border-primary)); }
+  .border-earth-secondary { border-color: rgb(var(--border-secondary)); }
+  
+  .shadow-light { box-shadow: 0 1px 3px rgba(101, 84, 68, 0.1); }
+  .shadow-dark { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .shadow-medium { box-shadow: 0 4px 6px rgba(101, 84, 68, 0.1); }
+  .shadow-dark-medium { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}

@@ -1,0 +1,120 @@
+---
+import config from "../siteDetails.json"
+
+// Get navigation pages from config
+const pages = config.navigation
+
+// Get current path for active state
+const currentPath = Astro.url.pathname
+---
+
+<nav class="bg-earth-primary border-b border-earth-primary shadow-light dark:shadow-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 relative">
+      
+      <!-- Left side: Logo and site name -->
+      <div class="flex items-center gap-3">
+        <img src="/favicon.svg" alt={`${config.name} logo`} class="w-8 h-8" />
+        <span class="text-xl font-semibold text-earth-primary">{config.name}</span>
+      </div>
+
+      <!-- Desktop navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {pages.map((page) => (
+          <a 
+            href={page.path}
+            class={`text-sm font-medium text-earth-secondary no-underline py-2 border-b-2 border-transparent transition-all duration-200 hover:text-earth-primary hover:border-earth-accent ${currentPath === page.path ? 'text-earth-primary border-earth-accent' : ''}`}
+          >
+            {page.name}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile menu toggle (CSS-only) -->
+      <input type="checkbox" id="mobile-menu-toggle" class="hidden" />
+      <label for="mobile-menu-toggle" class="flex md:hidden items-center justify-center w-10 h-10 rounded-md text-earth-secondary cursor-pointer transition-all duration-200 hover:text-earth-primary hover:bg-earth-secondary">
+        <span class="sr-only">Open main menu</span>
+        <span class="hamburger"></span>
+      </label>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu absolute top-full left-0 right-0 bg-earth-primary border-t border-earth-primary shadow-medium dark:shadow-dark-medium md:hidden">
+        {pages.map((page) => (
+          <a
+            href={page.path}
+            class={`block px-4 py-3 text-base font-medium text-earth-secondary no-underline border-b border-earth-secondary transition-all duration-200 hover:text-earth-primary hover:bg-earth-secondary last:border-b-0 ${currentPath === page.path ? 'text-earth-primary bg-earth-accent' : ''}`}
+          >
+            {page.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Hamburger icon */
+  .hamburger {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after,
+  .hamburger {
+    background-color: currentColor;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+  }
+
+  .hamburger::before {
+    top: -6px;
+  }
+
+  .hamburger::after {
+    bottom: -6px;
+  }
+
+  .hamburger {
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  /* Transform hamburger to X when menu is open */
+  #mobile-menu-toggle:checked + label .hamburger {
+    background-color: transparent;
+  }
+
+  #mobile-menu-toggle:checked + label .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  #mobile-menu-toggle:checked + label .hamburger::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* Mobile menu toggle animation */
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  #mobile-menu-toggle:checked ~ .mobile-menu {
+    max-height: 20rem;
+    opacity: 1;
+  }
+</style>
